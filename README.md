@@ -5,6 +5,7 @@
 * Add work related to papers in branch `papers/{your_name}`
 * All the work related to one heading should be put in a folder of name same as that of heading.
 * A markdown file for the content in folder.
+* After you have complete a part submit pull request to master
 
 _Please refer to `papers/amish` for an example regarding above part_
 
