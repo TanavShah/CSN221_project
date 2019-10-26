@@ -23,3 +23,7 @@ VMware Workstation has a hosted architecture that allows it to co-exist with a p
 ![Figure 2: Represents VMware's hosted virtual machine model](vmware_hosted.png?raw=true "Figure 2: Represents VMware's hosted virtual machine model")
 
 Figure 2: Represents VMware's hosted virtual machine model
+
+
+
+
