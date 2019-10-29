@@ -4,7 +4,7 @@ In today's world, virtualization is not only limited to home computers and data 
 
 - ARM is a 32 bit RISC based processor having 16 general purpose registers.
 - The architecture has 6 *privileged kernel*(for handling of different kinds of interrupts) modes and 1 *non-privileged user mode*. The architecture also has a *secure mode* in which the underlying hardware of the system becomes accessible. 
-(ARM\_virtualization.png?raw=true)
+![Virtual support for ARM](ARM\_virtualization.png?raw=true)
 
 # Entensions for Virtualization
 
