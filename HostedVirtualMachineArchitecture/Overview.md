@@ -1,5 +1,9 @@
 # A Hosted Virtual Machine Architecture
 
+
+![](overview.png?raw=true )
+
+
 VMware Workstation virtualizes I/O devices using a novel design called the Hosted Virtual Machine Architecture. The primary feature of this design is that it takes advantage of a pre-existing operating system for I/O device support and still achieves near native performance for CPU-intensive workloads. 
 
 VMware Workstation installs like a normal application on an operating system, known as the host operating system. When run, the application portion (VMApp) uses a driver loaded into the host operating system (VMDriver) to establish the privileged virtual machine monitor component (VMM) that runs directly on the hardware. From then on, a given physical processor is executing either the host world or the VMM world, with the VMDriver facilitating the transfer of control between the two worlds.
