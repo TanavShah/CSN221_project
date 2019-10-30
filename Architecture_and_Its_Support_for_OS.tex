@@ -1,0 +1,551 @@
+%%%%%%%%%%%%  Generated using docx2latex.com  %%%%%%%%%%%%%%
+
+%%%%%%%%%%%%  v2.0.0-beta  %%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[backend=biber,
+style=numeric,
+sorting=none,
+isbn=false,
+doi=false,
+url=false,
+]{biblatex}\addbibresource{bibliography.bib}
+
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{shapes.symbols,shapes.geometric,shadows,arrows.meta}
+\tikzset{>={Latex[width=1.5mm,length=2mm]}}
+\usepackage{flowchart}\usepackage[paperheight=11.0in,paperwidth=8.5in,left=1.0in,right=1.0in,top=1.0in,bottom=1.0in,headheight=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\TabPositions{0.5in,1.0in,1.5in,2.0in,2.5in,3.0in,3.5in,4.0in,4.5in,5.0in,5.5in,6.0in,}
+
+\urlstyle{same}
+
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\renewlist{enumerate}{enumerate}{9}
+		\setlist[enumerate,1]{label=\arabic*)}
+		\setlist[enumerate,2]{label=\alph*)}
+		\setlist[enumerate,3]{label=(\roman*)}
+		\setlist[enumerate,4]{label=(\arabic*)}
+		\setlist[enumerate,5]{label=(\Alph*)}
+		\setlist[enumerate,6]{label=(\Roman*)}
+		\setlist[enumerate,7]{label=\arabic*}
+		\setlist[enumerate,8]{label=\alph*}
+		\setlist[enumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+		\setlist[itemize]{label=$\cdot$}
+		\setlist[itemize,1]{label=\textbullet}
+		\setlist[itemize,2]{label=$\circ$}
+		\setlist[itemize,3]{label=$\ast$}
+		\setlist[itemize,4]{label=$\dagger$}
+		\setlist[itemize,5]{label=$\triangleright$}
+		\setlist[itemize,6]{label=$\bigstar$}
+		\setlist[itemize,7]{label=$\blacklozenge$}
+		\setlist[itemize,8]{label=$\prime$}
+
+\setlength{\topsep}{0pt}\setlength{\parskip}{9.96pt}
+\setlength{\parindent}{0pt}
+
+ %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
+
+
+\renewcommand{\arraystretch}{1.3}
+
+
+%%%%%%%%%%%%%%%%%%%% Document code starts here %%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+\begin{Center}
+{\fontsize{28pt}{33.6pt}\selectfont \textbf{Architecture and Its Support for OS.}\par}
+\end{Center}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{2.13in}p{3.65in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{2.13in}}{{\fontsize{20pt}{24.0pt}\selectfont OS Service}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{20pt}{24.0pt}\selectfont  Hardware Support}} \\
+\hhline{--}
+%row no:2
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont Protection}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Kernel/user mode, base/limit registers,} \par {\fontsize{14pt}{16.8pt}\selectfont Protected instructions}} \\
+\hhline{--}
+%row no:3
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont Interrupts}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Interrupt vectors}} \\
+\hhline{--}
+%row no:4
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont System calls}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Trap instructions and Trap vectors}} \\
+\hhline{--}
+%row no:5
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont I/O devices}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Interrupts and memory handling}} \\
+\hhline{--}
+%row no:6
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont Scheduling ,error recovery}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Timer}} \\
+\hhline{--}
+%row no:7
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont Synchronization}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Atomic instructions}} \\
+\hhline{--}
+%row no:8
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont Virtual Memory}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Translational look-aside buffers}} \\
+\hhline{--}
+
+\end{tabular}
+ \end{table}
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 1 ends here %%%%%%%%%%%%%%%%%%%%
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{Center}
+{\fontsize{22pt}{26.4pt}\selectfont \textbf{Events}\par}
+\end{Center}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{An event is an unnatural change in control flow}\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Events immediately stop current execution}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Changes mode, context (machine state), or both}\par}
+\end{itemize}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{The kernel defines a handler for each event type}\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Event handlers always execute in kernel mode}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{The specific types of events are defined by the machine}\par}
+\end{itemize}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Once the system is booted, all entry to the kernel occurs as the result of an event}\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{In effect, the operating system is one big event handler}\par}
+\end{itemize}\par
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{0.75in}{0.0in}
+{\fontsize{22pt}{26.4pt}\selectfont \textbf{Categorizing Events}\par}\par
+
+\end{adjustwidth}
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{There are two kinds of events –}\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Interrupts}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Exceptions}\par}
+\end{itemize}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Exceptions are caused by executing instructions}\par}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{- CPU requires software intervention to handle a fault or trap}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Interrupts are caused by an external event}\par}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{-}\par} {\fontsize{16pt}{19.2pt}\selectfont \textbf{Device finishes I/O, timer expires, etc.}\par}\par
+
+
+\vspace{\baselineskip}
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{There are two reasons for events -}\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Unexpected : unexpected events are well, and unexpected}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Deliberate : Deliberate events are scheduled by OS or application}\par}
+\end{itemize}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{All these description is shown in the given table:}\par}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 2 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{2.02in}p{2.02in}p{2.02in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{2.02in}}{} & 
+\multicolumn{1}{|p{2.02in}}{{\fontsize{14pt}{16.8pt}\selectfont Unexpected}} & 
+\multicolumn{1}{|p{2.02in}|}{{\fontsize{14pt}{16.8pt}\selectfont Deliberate}} \\
+\hhline{---}
+%row no:2
+\multicolumn{1}{|p{2.02in}}{{\fontsize{14pt}{16.8pt}\selectfont Exceptions (sync)}} & 
+\multicolumn{1}{|p{2.02in}}{{\fontsize{14pt}{16.8pt}\selectfont Fault}} & 
+\multicolumn{1}{|p{2.02in}|}{{\fontsize{14pt}{16.8pt}\selectfont System call trap}} \\
+\hhline{---}
+%row no:3
+\multicolumn{1}{|p{2.02in}}{{\fontsize{14pt}{16.8pt}\selectfont Interrupts (async)}} & 
+\multicolumn{1}{|p{2.02in}}{{\fontsize{14pt}{16.8pt}\selectfont interrupt}} & 
+\multicolumn{1}{|p{2.02in}|}{{\fontsize{14pt}{16.8pt}\selectfont Software interrupt}} \\
+\hhline{---}
+
+\end{tabular}
+ \end{table}
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 2 ends here %%%%%%%%%%%%%%%%%%%%
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{Center}
+{\fontsize{24pt}{28.8pt}\selectfont \textbf{Faults}\par}
+\end{Center}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Hardware detects and reports exceptional conditions such as page fault, write to a read-only page, overflow, trace trap, odd address trap, privileged instruction trap, system call etc.}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{It must transfer control to handler within the OS.}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Hardware must save state on fault (PC, etc.) so that the faulting process can be restarted afterwards.}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Modern operating systems use VM faults for many functions such as Debugging, distributed VM, Garbage collection, copy-on-write etc.}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Fault exceptions are a performance optimization, i.e., faults could be detected by inserting extra instructions into the code (but it requires high cost)}\par}\par
+
+
+\vspace{\baselineskip}
+{\fontsize{24pt}{28.8pt}\selectfont \textbf{Handling Faults}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Some faults are handled by fixing the exceptional condition and returning to the faulting context. For example-}\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Page faults cause the OS to place the missing page into memory}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Fault handler resets PC of faulting context to re-execute instruction that caused the page fault}\par}
+\end{itemize}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Some faults are handled by notifying the process}\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Fault handler changes the saved context to transfer control to a user-mode handler on return from fault}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Handler must be registered with OS}\par}
+\end{itemize}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{The kernel may handle unrecoverable faults by killing the user process}\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Program fault with no registered handler}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Halt process, write process state to file, destroy process}\par}
+\end{itemize}\par
+
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{0.75in}{0.0in}
+{\fontsize{24pt}{28.8pt}\selectfont \textbf{Traps}\par}\par
+
+\end{adjustwidth}
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Traps: special conditions detected by the architecture}\par}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{- Examples: page fault, write to read-only page, overflow, system call etc.}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{On detecting a trap, the hardware}\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Saves the state of the process (PC, Stack, etc.)}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Transfers control to appropriate trap handler (OS routine)}\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{The CPU indexes the memory-mapped trap vector with the trap number,}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{then jumps to the address given in the vector, and}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{starts to execute at that address.}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{On completion, the OS resumes execution of the process}\par}
+\end{itemize}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{Trap Vector: }\par}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 3 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{1.24in}p{1.46in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{1.24in}}{{\fontsize{14pt}{16.8pt}\selectfont 0: 0x00080000}} & 
+\multicolumn{1}{|p{1.46in}|}{{\fontsize{14pt}{16.8pt}\selectfont Illegal address}} \\
+\hhline{--}
+%row no:2
+\multicolumn{1}{|p{1.24in}}{{\fontsize{14pt}{16.8pt}\selectfont 1: 0x00100000}} & 
+\multicolumn{1}{|p{1.46in}|}{{\fontsize{14pt}{16.8pt}\selectfont Memory violation}} \\
+\hhline{--}
+%row no:3
+\multicolumn{1}{|p{1.24in}}{{\fontsize{14pt}{16.8pt}\selectfont 2: 0x00100480}} & 
+\multicolumn{1}{|p{1.46in}|}{{\fontsize{14pt}{16.8pt}\selectfont Illegal instruction}} \\
+\hhline{--}
+%row no:4
+\multicolumn{1}{|p{1.24in}}{{\fontsize{14pt}{16.8pt}\selectfont 3: 0x00123010}} & 
+\multicolumn{1}{|p{1.46in}|}{{\fontsize{14pt}{16.8pt}\selectfont System call}} \\
+\hhline{--}
+
+\end{tabular}
+ \end{table}
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 3 ends here %%%%%%%%%%%%%%%%%%%%
+
+\\
+
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Modern OS use Virtual Memory traps for many functions: debugging, disturbed VM, garbage collection, copy-on-write, etc.}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Traps are a performance optimization. A less efficient solution is to insert extra instruction into the code everywhere a special condition could arise.}\par}\par
+
+
+\vspace{\baselineskip}
+{\fontsize{24pt}{28.8pt}\selectfont \textbf{System Call}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{For a user program to do something $``$privileged$"$  (e.g., I/O) it must call an OS procedure}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Known as \textit{crossing \par}}}the protection boundary{\fontsize{16pt}{19.2pt}\selectfont \textbf{, or a \par}}protected procedure call
+\end{itemize}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Architecture provides a system call instruction that causes a trap, which vectors (jumps) to the trap handler in the OS kernel.}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{The trap handler uses the parameter to the system call to jump to the appropriate handler (I/O, Terminal, etc.).}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{The handler saves caller’s state (PC, mode bit) so it can restore control to the user process.}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{The architecture must permit the OS to verify the caller’s parameters.}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{The architecture must also provide a way to return to user mode when finished.}\par}
+\end{itemize}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\advance\leftskip 0.23in		\includegraphics[width=6.27in,height=2.55in]{./media/image1.jpeg}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 2 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+\advance\leftskip -0.26in		\includegraphics[width=6.89in,height=5.46in]{./media/image2.jpeg}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 2 Ends here %%%%%%%%%%%%%%%%%%%%
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  }\par}\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{Center}
+{\fontsize{24pt}{28.8pt}\selectfont \textbf{Interrupts}\par}
+\end{Center}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{There are two types of interrupts: }\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Precise interrupts – CPU transfers control only on instruction boundaries}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Imprecise interrupts – CPU transfers control in the middle of instruction execution}\par}
+\end{itemize}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{OS designers like precise interrupts, and CPU designers like imprecise interrupts}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Interrupts signal asynchronous events}\par}
+\end{itemize}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Timer, I/O, etc.}\par}\par
+
+
+\vspace{\baselineskip}
+\begin{Center}
+{\fontsize{24pt}{28.8pt}\selectfont \textbf{Interrupt based asynchronous I/O}\par}
+\end{Center}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Device controller has its own small processor which executes asynchronous with the main CPU.}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Device puts an interrupt signal on the bus when it is finished.}\par}\par
+
+
+\vspace{\baselineskip}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{CPU takes an interrupt.}\par}
+\end{itemize}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Save critical CPU state (hardware state),}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Disable interrupts,}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Save state that interrupt handler will modify (software state),}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Invoke using the \par}}in-memory Interrupt Vector\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Restore software state}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Enable interrupts}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Restore hardware state, and continue execution of interrupted process.}\par}
+\end{itemize}\par
+
+
+\vspace{\baselineskip}
+\begin{Center}
+{\fontsize{24pt}{28.8pt}\selectfont \textbf{Timer and atomic instruction}\par}
+\end{Center}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{Timer}\par}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Time of Day}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{Accounting and billing}\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{CPU protected from being hogged using timer interrupts that occur at say every 100 microsecond.}\par}
+\end{itemize}\par
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont \textbf{At each timer interrupt, the CPU chooses a new process to execute.}\par}
+\end{itemize}\par
+
+
+\vspace{\baselineskip}
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{Interrupt Vector:}\par}\par
+
+
+\vspace{\baselineskip}
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 4 starts here %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{1.36in}p{1.26in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{1.36in}}{{\fontsize{14pt}{16.8pt}\selectfont 0: 0x2ff080000}} & 
+\multicolumn{1}{|p{1.26in}|}{{\fontsize{14pt}{16.8pt}\selectfont Keyboard}} \\
+\hhline{--}
+%row no:2
+\multicolumn{1}{|p{1.36in}}{{\fontsize{14pt}{16.8pt}\selectfont 1: 0x2ff100000}} & 
+\multicolumn{1}{|p{1.26in}|}{{\fontsize{14pt}{16.8pt}\selectfont mouse}} \\
+\hhline{--}
+%row no:3
+\multicolumn{1}{|p{1.36in}}{{\fontsize{14pt}{16.8pt}\selectfont 2: 0x2ff100480}} & 
+\multicolumn{1}{|p{1.26in}|}{{\fontsize{14pt}{16.8pt}\selectfont timer}} \\
+\hhline{--}
+%row no:4
+\multicolumn{1}{|p{1.36in}}{{\fontsize{14pt}{16.8pt}\selectfont 3: 0x2ff123010}} & 
+\multicolumn{1}{|p{1.26in}|}{{\fontsize{14pt}{16.8pt}\selectfont Disk 1}} \\
+\hhline{--}
+
+\end{tabular}
+ \end{table}
+
+
+%%%%%%%%%%%%%%%%%%%% Table No: 4 ends here %%%%%%%%%%%%%%%%%%%%
+
+\\
+
+\vspace{\baselineskip}
+\vspace{\baselineskip}
+
+\printbibliography
+\end{document}
