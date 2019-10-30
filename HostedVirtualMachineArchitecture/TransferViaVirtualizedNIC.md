@@ -2,7 +2,7 @@
 
 Components involved in a virtual machine network packet send and receive. Boxed components delineate components that are due to the hosted nature of the network device virtualization.
 
-
+![](transfer_via_virtualized_NIC.png?raw=true )
 
 
 The guest operating system runs the device driver for a Lance controller. The driver initiates packet transmissions by reading and writing a sequence of virtual I/O ports, each of which switches back to the VMApp to emulates the Lance port accesses. On the final OUT instruction of the sequence, the Lance emulation does a normal write() to the VMNet driver, which passes the packet onto the network via a host NIC and then the VMApp switches back to the VMM, which raises a virtual IRQ to notify the guest device driver the packet was sent. Packet receives occur in reverse. 
