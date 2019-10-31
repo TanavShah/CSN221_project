@@ -7,7 +7,7 @@ keep instructions simple thus allowing for a simple control structure and effici
 The kernel space cannot be directly accessed by user programs, and it is reserved for the use of the operating system.
 Note that the kernel space is half of the address space (it contains those addresses that have the most
 significant bit 1). The kernel space may be organized the same way as the user space (with a text segment,
-data segment, stack), though this is not shown on the figure.
+data segment, stack).
 The text segment contains the user code the system is executing. The data segment has two sections:
 - static data, which contains the space for static and global variables; generally speaking this is the storage place for data object whose life is the same as the program’s
 - dynamic data, where space is allocated for data objects at run time (typically using malloc)
