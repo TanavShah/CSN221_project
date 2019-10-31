@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2019-09-20" view-index="0" gantt-divider-location="300" resource-divider-location="300" version="2.8.10" locale="en_IN">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Name" width="167" order="0"/>
+        <field id="tpd4" name="Begin date" width="65" order="1"/>
+        <field id="tpd5" name="End date" width="64" order="2"/>
+        <option id="taskLabelUp" value="name"/>
+        <option id="taskLabelDown" value="advancement"/>
+        <option id="taskLabelLeft" value="predecessors"/>
+        <timeline>
+            <![CDATA[60,69,2,65,57,34,7,63,76,49,36,74,19,21,62,28,31,51]]>
+        </timeline>
+        <option id="color.recent">
+            <![CDATA[#663300 #009999 #660066 #ffcccc #00cccc #ff6633 #9999ff #99cc00 #ff0000]]>
+        </option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="19" name="Deciding of the project topic" color="#ff0000" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2019-09-25" duration="4" complete="100" thirdDate="2019-09-24" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[We looked for a good topic in the given resource link and did some research ourselves to decide upon the topic
+-ALL]]>
+            </notes>
+        </task>
+        <task id="21" name="Repository creation." color="#ff0000" meeting="true" start="2019-10-02" duration="0" complete="100" thirdDate="2019-09-24" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[We created the github repository and added the abstract for the repo on this day.
+-ALL]]>
+            </notes>
+        </task>
+        <task id="2" name="Read about the topic in general and gathered information" color="#ff0000" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2019-10-03" duration="2" complete="100" thirdDate="2019-08-13" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[During this Phase we read various research papers and tried to gain the gist of the idea of Virtualization and VMs. e also experimented a bit with the VM technology with the help of softwares like VMWare, VirtualBox etc
+-ALL]]>
+            </notes>
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="7" name="Distribution of work and collecting resources." color="#ff0000" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2019-10-07" duration="4" complete="100" thirdDate="2019-08-21" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Since this was a big project, we divided it up into a few modules and distributed it among ourselves to work on it.
+-ALL]]>
+            </notes>
+        </task>
+        <task id="28" name="Added introductory module to the project." color="#00cccc" meeting="false" start="2019-10-14" duration="3" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[This module discusses what a virtual machine is and what are its usages and benefits.
+-Amish]]>
+            </notes>
+        </task>
+        <task id="34" name="Added the module for Hosted Virtual Machine Architecture" color="#99cc00" meeting="false" start="2019-10-14" duration="6" complete="80" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[VMware Workstation virtualizes I/O devices using a novel design called the Hosted Virtual Machine Architecture. The primary feature of this design is that it takes advantage of a pre-existing operating system for I/O device support and still achieves near native performance for CPU-intensive workloads.
+
+-Tanav]]>
+            </notes>
+            <depend id="36" type="2" difference="5" hardness="Strong"/>
+        </task>
+        <task id="36" name="Continued work on Hosted Virtual OS Architecture." color="#99cc00" meeting="false" start="2019-10-29" duration="3" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[-Tanav]]>
+            </notes>
+        </task>
+        <task id="31" name="Added Features of security in VMs" color="#9999ff" meeting="false" start="2019-10-15" duration="4" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Read about the vaarious security features and flaws of Virtualization and Virtual Machines. Read about the bottlenecks and the advantages of splitting up processes among the virtual machines.
+-Rishi]]>
+            </notes>
+        </task>
+        <task id="49" name="Added module for virtualization in ARM Architecture." color="#9999ff" meeting="false" start="2019-10-23" duration="3" complete="70" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Read about how the ARM Architecture supports virtualization and how it is different from x86 architecture. Also, the various additional features ARM had to add in order to make virtualization possible.
+-Rishi]]>
+            </notes>
+            <depend id="51" type="2" difference="2" hardness="Strong"/>
+        </task>
+        <task id="51" name="Continued the work on Virtualization in ARM" color="#9999ff" meeting="false" start="2019-10-30" duration="1" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[-Rishi]]>
+            </notes>
+        </task>
+        <task id="57" name="Worked on the network performance and I/O support in VMs" color="#00cccc" meeting="false" start="2019-10-21" duration="5" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[A hosted virtualization strategy for I/O devices offers excellent flexibility and portability but at a potential tradeoff in performance for high throughput devices.
+-Amish]]>
+            </notes>
+        </task>
+        <task id="62" name="Added module for host OS support in VMs." color="#00cccc" meeting="false" start="2019-10-28" duration="2" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[This module discusses about the Operating System support for the Virtual Machine Monitor. It utilises a type II VMM UMLinux for this purpose. This module discusses three bottlenecks.
+-Amish]]>
+            </notes>
+        </task>
+        <task id="60" name="Added Module for MIPS implementation" color="#ff6633" meeting="false" start="2019-10-29" duration="3" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[We implemented a simple instruction interpretor using the simple MIPS virtual computer and also learned about the wasy in which MIPS Virtual Computer works.
+-Rishi, Tanav, Amish]]>
+            </notes>
+        </task>
+        <task id="63" name="Bottlenecks of Type 2 VMM, support by host OS and their solutions" color="#ffcccc" meeting="false" start="2019-10-28" duration="3" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Discussed various problems with the UMLinux and their solutions
+-Saurav]]>
+            </notes>
+        </task>
+        <task id="65" name="Intro to Type 2 VMMs and host OSes" color="#ffcccc" meeting="false" start="2019-10-14" duration="5" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true"/>
+        <task id="69" name="Bottlenecks of I/O control in VM and VMM Bypass i/o technique" color="#660066" meeting="false" start="2019-10-17" duration="10" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Added various Bottlenecks in I/O moduling in VMs.
+- Om]]>
+            </notes>
+        </task>
+        <task id="72" name="Architecture support for VMM" color="#009999" meeting="false" start="2019-10-21" duration="7" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Added x86 architecture support for virtualization.
+-Nihal]]>
+            </notes>
+        </task>
+        <task id="74" name="faults, traps and system call," color="#663300" meeting="false" start="2019-10-14" duration="3" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Added fault, traps and syscall procedure in an OS.
+-Shubhrat]]>
+            </notes>
+        </task>
+        <task id="76" name="interrupts and interrupt vector" color="#663300" meeting="false" start="2019-10-25" duration="3" complete="100" thirdDate="2019-09-25" thirdDate-constraint="0" expand="true">
+            <notes>
+                <![CDATA[Added interrupts handling in OSes.
+-Shubhrat]]>
+            </notes>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
