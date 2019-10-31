@@ -2,7 +2,7 @@
 
 **MIPS** is a ‘typical’ RISC architecture: it has a simple and regular instruction set, only one memory addressing mode (base plus displacement) and instructions are of fixed size (32 bit).
 
-Keep in mind that MIPS is a register-register (or Load/Store), three address machine.
+MIPS is a register-register (or Load/Store), three address machine.
 - register-register means that all operations are performed in registers. Access to memory is provided
 only by load and store instructions. There is no arithmetic or logic instruction that has part of operands
 in registers and part in memory. Operands for such instructions are always in registers.
