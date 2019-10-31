@@ -4,7 +4,7 @@ The only way CPU can access the memory in MIPS is through load and store instruc
 addressing mode (base+displacement). Having just one addressing mode is part of the RISC philosophy to
 keep instructions simple thus allowing for a simple control structure and efficient pipelining.
 
-The kernel space can not be directly accesses by user programs, and it is reserved for the use of the operating system.
+The kernel space cannot be directly accessed by user programs, and it is reserved for the use of the operating system.
 Note that the kernel space is half of the address space (it contains those addresses that have the most
 significant bit 1). The kernel space may be organized the same way as the user space (with a text segment,
 data segment, stack), though this is not shown on the figure.
