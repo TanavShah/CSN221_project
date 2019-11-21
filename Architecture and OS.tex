@@ -1,0 +1,422 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[backend=biber,
+style=numeric,
+sorting=none,
+isbn=false,
+doi=false,
+url=false,
+]}
+
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{shapes.symbols,shapes.geometric,shadows,arrows.meta}
+\tikzset{>={Latex[width=1.5mm,length=2mm]}}
+\usepackage{flowchart}\usepackage[paperheight=11.69in,paperwidth=8.27in,left=1.0in,right=1.0in,top=1.0in,bottom=1.0in,headheight=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\TabPositions{0.5in,1.0in,1.5in,2.0in,2.5in,3.0in,3.5in,4.0in,4.5in,5.0in,5.5in,6.0in,}
+
+\urlstyle{same}
+
+
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+\setlistdepth{9}
+\renewlist{enumerate}{enumerate}{9}
+		\setlist[enumerate,1]{label=\arabic*)}
+		\setlist[enumerate,2]{label=\alph*)}
+		\setlist[enumerate,3]{label=(\roman*)}
+		\setlist[enumerate,4]{label=(\arabic*)}
+		\setlist[enumerate,5]{label=(\Alph*)}
+		\setlist[enumerate,6]{label=(\Roman*)}
+		\setlist[enumerate,7]{label=\arabic*}
+		\setlist[enumerate,8]{label=\alph*}
+		\setlist[enumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+		\setlist[itemize]{label=$\cdot$}
+		\setlist[itemize,1]{label=\textbullet}
+		\setlist[itemize,2]{label=$\circ$}
+		\setlist[itemize,3]{label=$\ast$}
+		\setlist[itemize,4]{label=$\dagger$}
+		\setlist[itemize,5]{label=$\triangleright$}
+		\setlist[itemize,6]{label=$\bigstar$}
+		\setlist[itemize,7]{label=$\blacklozenge$}
+		\setlist[itemize,8]{label=$\prime$}
+
+\setlength{\topsep}{0pt}\setlength{\parskip}{9.96pt}
+\setlength{\parindent}{0pt}
+
+
+
+\renewcommand{\arraystretch}{1.3}
+
+\begin{document}
+
+\begin{table}[H]
+ 			\centering
+\begin{tabular}{p{2.13in}p{3.65in}}
+\hline
+%row no:1
+\multicolumn{1}{|p{2.13in}}{{\fontsize{20pt}{24.0pt}\selectfont OS Service}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{20pt}{24.0pt}\selectfont  Hardware Support}} \\
+\hhline{--}
+%row no:2
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont Protection}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Kernel/user mode, base/limit registers,} \par {\fontsize{14pt}{16.8pt}\selectfont Protected instructions}} \\
+\hhline{--}
+%row no:3
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont Interrupts}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Interrupt vectors}} \\
+\hhline{--}
+%row no:4
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont System calls}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Trap instructions and Trap vectors}} \\
+\hhline{--}
+%row no:5
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont I/O devices}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Interrupts and memory handling}} \\
+\hhline{--}
+%row no:6
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont Scheduling ,error recovery}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Timer}} \\
+\hhline{--}
+%row no:7
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont Synchronization}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Atomic instructions}} \\
+\hhline{--}
+%row no:8
+\multicolumn{1}{|p{2.13in}}{{\fontsize{14pt}{16.8pt}\selectfont Virtual Memory}} & 
+\multicolumn{1}{|p{3.65in}|}{{\fontsize{14pt}{16.8pt}\selectfont Translational look-aside buffers}} \\
+\hhline{--}
+
+\end{tabular}
+ \end{table}
+
+
+%% Table No: 1 ends here %%
+
+\begin{Center}
+{\fontsize{24pt}{28.8pt}\selectfont \textbf{Architecture and Its Support for OS.}\par}
+\end{Center}\par
+
+
+\vspace{\baselineskip}
+\begin{Center}
+{\fontsize{24pt}{28.8pt}\selectfont \textbf{Protection}\par}
+\end{Center}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{\textcolor[HTML]{E36C0A}{Kernel mode vs User Mode}: }To protect the system from aberrant users and processors, some instructions are restricted to use only by the OS. Users may not\par}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont -Address I/O directly\par}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont -use instructions that manipulate the state of memory(page table pointers, TLB load etc.)\par}\par
+
+
+\vspace{\baselineskip}
+{\fontsize{16pt}{19.2pt}\selectfont - set the mode bits that determine user/kernel mode\par}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont -disable/enable interrupts\par}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont -halt the machine\par}\par
+
+{\fontsize{18pt}{21.6pt}\selectfont But in kernel mode, {\fontsize{16pt}{19.2pt}\selectfont the OS can do all these things\par}\par}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont Thus the hardware must support at least two modes, the \textcolor[HTML]{76923C}{User} and the \textcolor[HTML]{76923C}{Kernel mode.}\par}\par
+
+{\fontsize{16pt}{19.2pt}\selectfont -A status bit in a protected processor register determine the mode.\par}\par
+
+{\fontsize{18pt}{21.6pt}\selectfont \textbf{\textcolor[HTML]{FFC000}{Protected/Privileged instructions can be only executed in Kernel mode}}\par}\par
+
+{\fontsize{18pt}{21.6pt}\selectfont \textbf{\textcolor[HTML]{FFC000}{If code running in user mode attempts to execute a privileged instruction the Illegal excecutin trap}}\par}\par
+
+
+
+%%% Figure/Image No: 1 starts here %%%
+
+\begin{figure}[H]
+\advance\leftskip -0.43in		\includegraphics[width=4.94in,height=3.66in]{./media/image1.png}
+\end{figure}
+
+
+%%%%%% Figure/Image No: 1 Ends here %%%%
+
+\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\par 
+ \begin{tikzpicture}
+
+\begin{scope}[yscale=-1,xscale=-1,yshift=1.22in,xshift=-0.86in]
+	\draw [->] (-0.12in,-0.34in) -- (0.98in,-0.88in); 
+\end{scope}
+
+\end{tikzpicture}
+
+\vspace{\baselineskip}
+\begin{FlushRight}
+{\fontsize{18pt}{21.6pt}\selectfont X86 supports 4 protection modes\par}
+\end{FlushRight}\par
+
+
+\vspace{\baselineskip}
+{\fontsize{24pt}{28.8pt}\selectfont Crossing Protection Boundaries\par}\par
+
+{\fontsize{18pt}{21.6pt}\selectfont \textbf{System Call: The programs that we the users can’t execute, we ask the OS kernel to do on our behalf. So this is what we call the System call. So System call is a  }OS procedure that manages privileged instructions(e.x- I/O).- Also API exported by the kernel .\par}\par
+
+\begin{itemize}
+	\item {\fontsize{18pt}{21.6pt}\selectfont Causes a trap, which vectors (jumps) to the trap handler in the OS kernel.\par}\par
+
+	\item {\fontsize{18pt}{21.6pt}\selectfont The trap handler uses the parameter in the system call to jump to the appropriate handler (I/O, terminal etc.)\par}\par
+
+	\item {\fontsize{18pt}{21.6pt}\selectfont The handler saves caller state (PC, mode bit) so it can restore the user processes.\par}\par
+
+	\item {\fontsize{18pt}{21.6pt}\selectfont The architecture must permit the OS to verify the caller’s parameters.\par}\par
+
+
+
+%%%%%% Figure/Image No: 2 starts here %%%
+
+\begin{figure}[H]
+\advance\leftskip 0.06in		\includegraphics[width=6.27in,height=2.55in]{./media/image2.jpeg}
+\end{figure}
+
+
+%%% Figure/Image No: 2 Ends here %%%%%
+
+	\item {\fontsize{18pt}{21.6pt}\selectfont The architecture must also provide a way to return to the user mode when finished.\par}\par
+
+
+%%%% Figure/Image No: 3 starts here %%%%
+\begin{figure}[H]
+\advance\leftskip 0.25in		\includegraphics[width=5.33in,height=4.44in]{./media/image3.png}
+\end{figure}
+
+
+%%% Figure/Image No: 3 Ends here %%%
+
+\par
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+
+%%%% Figure/Image No: 4 starts here %%%%%
+
+\begin{figure}[H]
+\advance\leftskip -0.43in		\includegraphics[width=6.89in,height=5.46in]{./media/image4.jpeg}
+\end{figure}
+
+%%%%% Figure/Image No: 4 Ends here %%%%%
+
+\par
+
+\begin{Center}
+{\fontsize{24pt}{28.8pt}\selectfont Memory Protection\par}
+\end{Center}\par
+
+{\fontsize{18pt}{21.6pt}\selectfont Architecture must provide support so that th OS can\par}\par
+
+	\item {\fontsize{18pt}{21.6pt}\selectfont Protect the user programs from each other , and\par}\par
+
+	\item {\fontsize{18pt}{21.6pt}\selectfont Protect the OS from user programs(may be malicious)\par}
+\end{itemize}\par
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{18pt}{21.6pt}\selectfont \textbf{Memory protection} {\fontsize{16pt}{19.2pt}\selectfont is a way to control memory access rights on a computer, and is a part of most modern instruction set architectures and operating systems. The main purpose of memory protection is to prevent a process from accessing memory that has not been allocated to it. This prevents a bug or malware within a process from affecting other processes, or the operating system itself. Protection may encompass all accesses to a specified area of memory, write accesses, or attempts to execute the contents of the area.\par}\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{18pt}{21.6pt}\selectfont Memory protection {\fontsize{16pt}{19.2pt}\selectfont prevents one process from affecting the confidentiality, integrity, or availability of another. This is a requirement for secure multiuser (more than one user logged in simultaneously) and multitasking (more than one process running simultaneously) systems.\par}\par}\par
+
+\end{adjustwidth}
+
+\begin{itemize}
+	\item {\fontsize{16pt}{19.2pt}\selectfont The simplest technique to get the memory protection is to Use Base(a register in the hardware) and Limit Registers.\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont Base and Limit registers are loaded by the OS before starting a program.\par}\par
+
+	\item {\fontsize{16pt}{19.2pt}\selectfont The CPU checks each user reference(instructions and data addresses), ensuring it falls between the base and limit registers .\par}
+\end{itemize}\par
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{18pt}{21.6pt}\selectfont Process Isolation\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{18pt}{21.6pt}\selectfont \textit{Process isolation} {\fontsize{16pt}{19.2pt}\selectfont is a logical control that attempts to prevent one process from interfering with another. This is a common feature among multiuser operating systems such as Linux, UNIX, or recent Microsoft Windows operating systems. Older operating systems such as MS-DOS provide no process isolation. A lack of process isolation means a crash in any MS-DOS application could crash the entire system.\par}\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont If you are shopping online and enter your credit card number to buy a book, that number will exist in plaintext in memory (for at least a short period of time). Process isolation means that another user’s process on the same computer cannot interfere with yours.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont Interference includes attacks on the confidentiality (reading your credit card number), integrity (changing your credit card number), and availability (interfering or stopping the purchase of the book).\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont Techniques used to provide process isolation include \textbf{virtual memory, object \textit{encapsulation} and time multiplexing}. Object encapsulation treats a process as a $``$black box$"$ . Time multiplexing shares (multiplexes) system resources between multiple processes, each with a dedicated slice of time.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{18pt}{21.6pt}\selectfont Hardware Segmentation\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont Hardware segmentation takes process isolation one step further by mapping processes to specific memory locations. This provides more security than (logical) process isolation alone.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{18pt}{21.6pt}\selectfont \textbf{Simulated segmentation}\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont Simulation is the use of a monitoring program to interpret the machine code instructions of some computer architectures. Such an instruction set simulator can provide memory protection by using a segmentation-like scheme and validating the target address and length of each instruction in real time before actually executing them. The simulator must calculate the target address and length and compare this against a list of valid address ranges that it holds concerning the thread's environment, such as any dynamic memory blocks acquired since the thread's inception, plus any valid shared static memory slots. The meaning of "valid" may change throughout the thread's life depending upon context. It may sometimes be allowed to alter a static block of storage, and sometimes not, depending upon the current mode of execution, which may or may not depend on a storage key or supervisor state.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont It is generally not advisable to use this method of memory protection where adequate facilities exist on a CPU, as this takes valuable processing power from the computer. However, it is generally used for debugging and testing purposes to provide an extra fine level of granularity to otherwise generic storage violations and can indicate precisely which instruction is attempting to overwrite the particular section of storage which may have the same storage key as unprotected storage.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont Consider the Intel architecture as an example of segmentation. It uses the code segment (CS) register as a segment selector and stores the current privilege level (CPL) as its two lower bits. When the executing code tries to access a data segment, the descriptor privilege level (DPL) is checked. Depending on whether the loaded segment is data, code, or a system call, the check ensures the CPL allows loading the segment descriptor based on the DPL. For example, a data segment DPL specifies the highest privilege level (CPL) that a task can have in order to be allowed access, so if DPL is 2 then access is granted only to tasks with CPL of 0, 1, or 2. A third privilege level, the requested privilege level (RPL), is used when invoking OS services through call gates and prevents less privileged applications from elevating privileges and gaining access to restricted system segments.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont Most open or commercial OSs ignore or make limited use of segmentation. OS/2 is a modern commercial OS that uses the full features of segmentation. Some virtualization techniques (such as the VMWare ESX hypervisor) do reserve a segment for a resident memory area and rely on segment limit checks to catch illegal accesses.\par}\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{18pt}{21.6pt}\selectfont Virtual Memory\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont \textbf{\textit{Virtual memor}}\textit{y} provides virtual address mapping between applications and hardware memory. Virtual memory provides many functions, including multitasking (multiple tasks executing at once on one CPU), allowing multiple processes to access the same shared library in memory, swapping, and others.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{18pt}{21.6pt}\selectfont \textbf{Swapping and Paging}\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont \textit{Swapping} uses virtual memory to copy contents in primary memory (RAM) to or from secondary memory (not directly addressable by the CPU, on disk). Swap space is often a dedicated disk partition that is used to extend the amount of available memory. If the kernel attempts to access a page (a fixed-length block of memory) stored in swap space, a page fault occurs (an error that means the page is not located in RAM), and the page is $``$swapped$"$  from disk to RAM.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont Most computers configured with virtual memory, as the system in Figure 4.10, will use only RAM until the RAM is nearly or fully filled. The system will then swap processes to virtual memory. It will attempt to find idle processes so that the impact of swapping will be minimal.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont Eventually, as additional processes are started and memory continues to fill, both RAM and swap will fill. After the system runs out of idle processes to swap, it may be forced to swap active processes. The system may begin $``$thrashing,$"$  spending large amounts of time copying data to and from swap space, seriously impacting availability.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont Swap is designed as a protective measure to handle occasional bursts of memory usage. Systems should not routinely use large amounts of swap: in that case, physical memory should be added, or processes should be removed, moved to another system, or shortened.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{18pt}{21.6pt}\selectfont \textbf{Protecting Memory from Malicious Applications}\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont Windows Vista includes Data Execution Prevention (DEP), a memory protection application that monitors the use of memory by applications. By default, it does not allow applications to use those memory locations reserved for the system. This essentially helps protect the system from malicious code that may insert itself into a system memory location. In other words, DEP is a security feature that allows only system applications to use system memory locations. If DEP detects that any application is inappropriately using system memory locations, it shuts down the application and displays a message.\par}\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.25in}{0.0in}
+{\fontsize{16pt}{19.2pt}\selectfont By default, DEP is enabled only for essential Windows services and applications. You can configure DEP for all services and programs as well as specify exceptions. Vista provides this feature as a software-based solution for protecting system memory. Some hardware vendors provide DEP as a hardware-based solution. Even if your computer hardware does not support DER a malicious application such as a virus program can be prevented by Windows Vista DEP from undesired use of system memory. This helps in keeping the system stable by preventing inappropriate memory usage by malicious software\par}\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+
+\end{document}
