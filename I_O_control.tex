@@ -1,0 +1,530 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[backend=biber,
+style=numeric,
+sorting=none,
+isbn=false,
+doi=false,
+url=false,
+]{biblatex}\addbibresource{bibliography.bib}
+
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{shapes.symbols,shapes.geometric,shadows,arrows.meta}
+\tikzset{>={Latex[width=1.5mm,length=2mm]}}
+\usepackage{flowchart}\usepackage[paperheight=11.0in,paperwidth=8.5in,left=1.0in,right=1.0in,top=1.0in,bottom=1.0in,headheight=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\TabPositions{0.5in,1.0in,1.5in,2.0in,2.5in,3.0in,3.5in,4.0in,4.5in,5.0in,5.5in,6.0in,}
+
+\urlstyle{same}
+
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%
+
+
+\setlistdepth{9}
+\renewlist{enumerate}{enumerate}{9}
+		\setlist[enumerate,1]{label=\arabic*)}
+		\setlist[enumerate,2]{label=\alph*)}
+		\setlist[enumerate,3]{label=(\roman*)}
+		\setlist[enumerate,4]{label=(\arabic*)}
+		\setlist[enumerate,5]{label=(\Alph*)}
+		\setlist[enumerate,6]{label=(\Roman*)}
+		\setlist[enumerate,7]{label=\arabic*}
+		\setlist[enumerate,8]{label=\alph*}
+		\setlist[enumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+		\setlist[itemize]{label=$\cdot$}
+		\setlist[itemize,1]{label=\textbullet}
+		\setlist[itemize,2]{label=$\circ$}
+		\setlist[itemize,3]{label=$\ast$}
+		\setlist[itemize,4]{label=$\dagger$}
+		\setlist[itemize,5]{label=$\triangleright$}
+		\setlist[itemize,6]{label=$\bigstar$}
+		\setlist[itemize,7]{label=$\blacklozenge$}
+		\setlist[itemize,8]{label=$\prime$}
+
+\setlength{\topsep}{0pt}\setlength{\parskip}{8.04pt}
+\setlength{\parindent}{0pt}
+
+ %% This sets linespacing (verticle gap between Lines) Default=1 %%
+
+
+\renewcommand{\arraystretch}{1.3}
+
+
+%%% Document code starts here %%%
+
+
+
+\begin{document}
+{\fontsize{20pt}{24.0pt}\selectfont \textbf{I/O Hardware Control}\par}\par
+
+\begin{adjustwidth}{0.5in}{0.0in}
+I/O devices can be roughly categorized as storage, communications, user-interface, and other\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.5in}{0.0in}
+Devices communicate with the computer via signals sent over wires or through the air.\par
+
+\end{adjustwidth}
+
+\begin{itemize}
+	\item A common set of wires connecting multiple devices is termed a \textbf{\textit{bus. }}Buses include rigid protocols for the types of messages that can be sent across the bus and the procedures for resolving contention issues.\par
+
+\begin{itemize}
+	\item \textit{The \textbf{PCI bus} connects high-speed high-bandwidth devices to the memory subsystem ( and the CPU. )}\par
+
+	\item \textit{The \textbf{expansion bus} connects slower low-bandwidth devices, which typically deliver data one character at a time ( with buffering. )}\par
+
+	\item \textit{The \textbf{SCSI bus} connects a number of SCSI devices to a common SCSI controller.}\par
+
+	\item \textit{A \textbf{daisy-chain bus,} ( not shown) is when a string of devices is connected to each other like beads on a chain and only one of the devices is connected to the host.}
+\end{itemize}
+\end{itemize}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.5in,height=4.4in]{./media/image1.jpeg}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 1 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+Registers\par
+
+\begin{itemize}
+	\item One way of communicating with devices is through \textbf{\textit{registers}} associated with each port. Registers may be one to four bytes in size, and may typically include ( a subset of ) the following four:
+\end{itemize}\par
+
+\begin{itemize}
+	\item The \textbf{\textit{data-in register}} is read by the host to get input from the device.\par
+
+	\item The \textbf{\textit{data-out register }}is written by the host to send output.\par
+
+	\item The \textbf{\textit{status register}} has bits read by the host to ascertain the status of the device, such as idle, ready for input, busy, error, transaction complete, etc.\par
+
+	\item The \textbf{\textit{control register}} has bits written by the host to issue commands or to change settings of the device such as parity checking, word length, or full- versus half-duplex operation.
+\end{itemize}\par
+
+ \\
+Some of the most common I/O port address ranges:\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 2 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.5in,height=3.55in]{./media/image2.jpeg}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 2 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\par
+
+{\fontsize{18pt}{21.6pt}\selectfont \textbf{Polling}\par}\par
+
+\begin{itemize}
+	\item One simple means of device \textbf{\textit{handshaking}} involves polling:\par
+
+\begin{itemize}
+	\item The host repeatedly checks the \textbf{\textit{busy bit}} on the device until it becomes clear.\par
+
+	\item The host writes a byte of data into the data-out register, and sets the \textbf{\textit{write bit}} in the command register ( in either order. )\par
+
+	\item The host sets the \textbf{\textit{command ready bit}} in the command register to notify the device of the pending command.\par
+
+	\item When the device controller sees the command-ready bit set, it first sets the busy bit.\par
+
+	\item Then the device controller reads the command register, sees the write bit set, reads the byte of data from the data-out register, and outputs the byte of data.\par
+
+	\item The device controller then clears the \textbf{\textit{error bit}} in the status register, the command-ready bit, and finally clears the busy bit, signaling the completion of the operation.\par
+
+
+\end{itemize}
+	\item Polling can be very fast and efficient, if both the device and the controller are fast and if there is significant data to transfer. It becomes inefficient, however, if the host must wait a long time in the busy loop waiting for the device, or if frequent checks need to be made for data that is infrequently there
+\end{itemize}\par
+
+
+\vspace{\baselineskip}
+{\fontsize{20pt}{24.0pt}\selectfont \textbf{\textit{Memory-mapped I/O}}\par}\par
+
+\begin{itemize}
+	\item In this case a certain portion of the processor's address space is mapped to the device, and communications occur by reading and writing directly to/from those memory areas.\par
+
+	\item Memory-mapped I/O is suitable for devices which must move large quantities of data quickly, such as graphics cards.\par
+
+	\item Memory-mapped I/O can be used either instead of or more often in combination with traditional registers. For example, graphics cards still use registers for control information such as setting the video mode.\par
+
+	\item A potential problem exists with memory-mapped I/O, if a process is allowed to write directly to the address space used by a memory-mapped I/O device
+\end{itemize}\par
+
+\textbf{How data is accessed in memory mapped I/O?}\par
+
+\begin{itemize}
+	\item Memory-mapped I/O uses the same \textit{mechanism} as memory to communicate with the processor, but not the system's RAM. The idea behind memory mapping is that a device will be connected to the system's address bus and uses a circuit called an \textit{address decoder} to watch for reads or writes to its assigned addresses responds accordingly.\par
+
+\setlength{\parskip}{5.04pt}
+{\fontsize{13pt}{15.6pt}\selectfont \textbf{Memory mapped I/O Control}\par}\par
+
+
+\vspace{\baselineskip}
+{\fontsize{13pt}{15.6pt}\selectfont The logic circuit that contains these registers is called the \textit{device controller}, and the software that communicates with the controller is called a \textit{device driver}.\par}\par
+
+\setlength{\parskip}{0.0pt}
+ \tabto{0.64in}  \tabto{1.27in}  \tabto{1.91in} {\fontsize{10pt}{12.0pt}\selectfont  \tabto{2.54in} +-------------------+\ \ \ \ \ \ \ \ \ \  +-----------+\par}\par
+
+ \tabto{0.64in}  \tabto{1.27in}  \tabto{1.91in} {\fontsize{10pt}{12.0pt}\selectfont  \tabto{2.54in} $ \vert $ \ Device\ controller\ $ \vert $ \ \ \ \ \ \ \ \ \ \ \ $ \vert $ \ \ \ \ \ \ \ \    $ \vert $    \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ +-------+\ \ \ \ \ \ \ \ \ \ \ $ \vert $ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \    $ \vert $ <--------->$ \vert $ \  Device\ \  $ \vert $ \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ $ \vert $ \ \ \ \ \   $ \vert $ ---------->$ \vert $  Control register\  $ \vert $ \ \ \ \ \ \ \ \ \ \ \ $ \vert $ \ \ \ \ \ \ \ \ \   $ \vert $ \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  $ \vert $ \  CPU\ \ $ \vert $ <----------$ \vert $ \ Status\ register\ \ \ $ \vert $ \ \ \ \ \ \ \ \ \ \ \ $ \vert $ \ \ \ \ \       $ \vert $ \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ $ \vert $ \ \ \ \ \ \ \ $ \vert $ <--------->$ \vert $ \ Data\ register\ \ \ \ \ $ \vert $ \ \ \ \ \ \ \ \ \ \ \ $ \vert $ \ \ \ \        $ \vert $ \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ +-------+\ \ \ \ \ \ \ \ \ \ \ $ \vert $ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ $ \vert $ \ \ \ \ \ \ \ \ \ \ \ $ \vert $ \ \ \ \ \ \      $ \vert $ \par}\par
+
+ \tabto{0.64in}  \tabto{1.27in}  \tabto{1.91in} {\fontsize{10pt}{12.0pt}\selectfont  \tabto{2.54in} +-------------------+\ \ \ \ \ \ \ \ \ \  +-----------+\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+\setlength{\parskip}{5.04pt}
+	\item {\fontsize{13pt}{15.6pt}\selectfont Simple devices such as keyboards and mouse may be represented by only a few registers, while more complex ones such as disk drives and graphics adapters may have dozens.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont Each of the I/O registers, like memory, must have an address so that the CPU can read or write specific registers.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont Some CPUs have a separate address space for I/O devices. This requires separate instructions to perform I/O operations.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont Other architectures, like the MIPS, use \textit{memory-mapped I/O}. When using memory-mapped I/O, the same address space is shared by memory and I/O devices. Some addresses represent memory cells, while others represent registers in I/O devices. No separate I/O instructions are needed in a CPU that uses memory-mapped I/O. Instead, we can perform I/O operations using any instruction that can reference memory.\par}\par
+
+\setlength{\parskip}{0.0pt}
+ \tabto{0.64in}  \tabto{1.27in} {\fontsize{10pt}{12.0pt}\selectfont  \tabto{1.91in} \ \ \  +---------------+\par}\par
+
+ \tabto{0.64in}  \tabto{1.27in} {\fontsize{10pt}{12.0pt}\selectfont  \tabto{1.91in} \ \ \  $ \vert $  Address space $ \vert $ \par}\par
+
+ \tabto{0.64in}  \tabto{1.27in} {\fontsize{10pt}{12.0pt}\selectfont  \tabto{1.91in} \ \ \ \ $ \vert $ \ \ \ +-------+   $ \vert $ \par}\par
+
+ \tabto{0.64in}  \tabto{1.27in} {\fontsize{10pt}{12.0pt}\selectfont  \tabto{1.91in} \ \ \ \ $ \vert $ \   $ \vert $ \  ROM\ \ $ \vert $ \   $ \vert $ \par}\par
+
+ \tabto{0.64in}  \tabto{1.27in} {\fontsize{10pt}{12.0pt}\selectfont  \tabto{1.91in} \ \ \ \ $ \vert $ \ \ \ +-------+   $ \vert $ \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  +-------+address$ \vert $ \  $ \vert $ \ \ \ \ \ \ \ $ \vert $ \   $ \vert $ \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ $ \vert $ \ \ \ \ \   $ \vert $ ------>$ \vert $ \  $ \vert $ \ \ RAM\ \ $ \vert $    $ \vert $ \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  $ \vert $ \  CPU\ \ $ \vert $ \ \ \ \ \ \ \ $ \vert $ \ \ \ $ \vert $ \ \ \ \ \   $ \vert $    $ \vert $ \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ $ \vert $ \ \ \ \ \ \ \ $ \vert $ <----->$ \vert $ \ \  +-------+   $ \vert $ \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  +-------+ data\  $ \vert $ \ \ \ $ \vert $ \ \ \ \ \ \ \ $ \vert $    $ \vert $ \par}\par
+
+ \tabto{0.64in}  \tabto{1.27in} {\fontsize{10pt}{12.0pt}\selectfont  \tabto{1.91in} \ \ \ \ $ \vert $ \   $ \vert $ \  I/O\ \ $ \vert $ \   $ \vert $ \par}\par
+
+ \tabto{0.64in}  \tabto{1.27in} {\fontsize{10pt}{12.0pt}\selectfont  \tabto{1.91in} \ \ \ \ $ \vert $ \ \ \ +-------+   $ \vert $ \par}\par
+
+ \tabto{0.64in}  \tabto{1.27in} {\fontsize{10pt}{12.0pt}\selectfont  \tabto{1.91in} \ \ \  +---------------+\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+\setlength{\parskip}{5.04pt}
+	\item {\fontsize{13pt}{15.6pt}\selectfont On the MIPS, we would access ROM, RAM, and I/O devices using load and store instructions. Which type of device we access depends only on the address used!\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  lw\ \ \ \ \ \ $\$$ t0,\ 0x00000004\ \    $\#$  Read ROM\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  sw\ \ \ \ \ \ $\$$ t0,\ 0x00000004\ \    $\#$  Write ROM (bus error!)\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  lbu\ \ \ \ \ $\$$ t0,\ 0x0000ffc1\ \    $\#$  Read RAM\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  sb\ \ \ \ \ \ $\$$ t0,\ 0x0000ffc1\ \    $\#$  Write RAM\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  lbu\ \ \ \ \ $\$$ t0,\ 0xffff0000\ \    $\#$  Read an I/O device\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  sb\ \ \ \ \ \ $\$$ t0,\ 0xffff0004\ \    $\#$  Write to an I/O device\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+\setlength{\parskip}{5.04pt}
+	\item {\fontsize{13pt}{15.6pt}\selectfont The 32-bit MIPS architecture has a 32-bit address, and hence an address space of 4 gigabytes. Addresses 0x00000000 through 0xfffeffff are used for memory, and addresses 0xffff0000 - 0xffffffff (the last 64 kilobytes) are reserved for I/O device registers. This is a very small fraction of the total address space, and yet far more space than is needed for I/O devices on any one computer.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont Each register within an I/O controller must be assigned a unique address within the address space. This address may be fixed for certain devices, and auto-assigned for others. (PC plug-and-play devices have auto-assigned I/O addresses, which are determined during boot-up.)\par}\par
+
+
+\vspace{\baselineskip}
+{\fontsize{13pt}{15.6pt}\selectfont \textbf{\ \ \ \ \ \ \ \   Communicating with a Keyboard Controller}\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont The keyboard controller consists of two 32-bit registers, of which only a few bits are used.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont The \textit{receiver data register} resides at the fixed memory address 0xffff0004. The low 8 bits of this register contain the ASCII/ISO code of the last key that was pressed.\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ \ 31\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 8\ 7\     0\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  +---------------------------+\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ $ \vert $ \ \ \ \ \ \ \ unused\ \ \    $ \vert $ \  key\  $ \vert $ \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  +---------------------------+\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+\setlength{\parskip}{5.04pt}
+{\fontsize{13pt}{15.6pt}\selectfont This register is read-only, and can be accessed with a load instruction:\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  $\#$  Input ASCII/ISO code of last key to low byte of $\$$ t0\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  $\#$  and clear remaining bits of $\$$ t0\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  lbu\ \ \ \  $\$$ t0, 0xffff0004\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+\setlength{\parskip}{5.04pt}
+	\item {\fontsize{13pt}{15.6pt}\selectfont As always, we should use named constants rather than hard-code numbers like 0xffff0004.\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ CONS\_RECEIVER\_DATA\ \ \ \ \ \ \ \ \ \ \ \ \ \ =   0xffff0004\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  $\#$  Input ASCII/ISO code of last key to low byte of $\$$ t0\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  $\#$  and clear remaining bits of $\$$ t0\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  lbu\ \ \ \  $\$$ t0, CONS\_RECEIVER\_DATA\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+\setlength{\parskip}{5.04pt}
+	\item {\fontsize{13pt}{15.6pt}\selectfont The lbu (load byte unsigned) instruction should be used instead of lw, since lbu ensures that the 3 high bytes of the destination register are cleared. An lw would copy all 32 bits from the source. The high 3 bytes in the receiver control register are probably read as zeros, but lbu is a safer bet.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont The \textit{receiver control register} resides at memory address 0xffff0000. Only bits 0 and 1 are used.\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ \ 31\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \   0\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  +---------------------------+\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ $ \vert $ \ \ \ \ \ \ \ \ unused\ \ \ \ \ \    $ \vert $ I$ \vert $ R$ \vert $ \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  +---------------------------+\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+\setlength{\parskip}{5.04pt}
+	\item {\fontsize{13pt}{15.6pt}\selectfont Bit 0 (R) is the \textit{ready} bit. It is set to 1 by the keyboard controller when a key is pressed. It is cleared automatically when the receiver data register is read.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont Bit 1 (I) is the interrupt-enable bit. This bit should be set to 1 by software if keyboard interrupts are to be used. \par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont The ready bit in the receiver control register and the entire receiver data register are read-only for the CPU. Attempts to change their values (e.g. using sw or sb) have no effect.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont The code below demonstrates a simple \textit{spin waiting} (also known as \textit{busy waiting}) loop. A spin waiting loop does nothing but poll an I/O device until the device becomes "ready" (new input is received, or an output device is done processing previous output). As soon as the device is ready, the loop exits and the I/O transaction occurs.\par}\par
+
+\setlength{\parskip}{0.0pt}
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \ \ ISO\_LF\ \ \ \ \ \ \ \ \ \ \ \ \ \ =   10\  $\#$  Line feed (newline)\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \ \ SYS\_PRINT\_CHAR\ \ \ \ \ \ =   11\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \ \ $\#$ \ Receiver control.  1 in bit 0 means new char has arrived.  This bit\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  $\#$  is read-only, and resets to 0 when CONS\_RECEIVER\_DATA is read.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  $\#$  1 in bit 1 enables hardware interrupt at interrupt level 1.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  $\#$  Interrupts must also be enabled in the coprocessor 0 status register.\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \ \ CONS\_RECEIVER\_CONTROL\ \ \ \ \ \ \ \ \ \ \ =   0xffff0000\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \ \ CONS\_RECEIVER\_READY\_MASK\ \ \ \ \ \ \ \ =   0x00000001\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \ \ CONS\_RECEIVER\_DATA\ \ \ \ \ \ \ \ \ \ \ \ \ \ =   0xffff0004\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  $\#$  Main body\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  .text\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  main:\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  $\#$  Spin-wait for key to be pressed\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  key\_wait:\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  lw\ \ \ \ \  $\$$ t0, CONS\_RECEIVER\_CONTROL\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  andi\ \ \  $\$$ t0, $\$$ t0, CONS\_RECEIVER\_READY\_MASK\  $\#$  Isolate ready bit\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  beqz\ \ \  $\$$ t0, key\_wait\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  $\#$  Read in new character from keyboard to low byte of $\$$ a0\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  $\#$  and clear other 3 bytes of $\$$ a0\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  lbu\ \ \ \  $\$$ a0, CONS\_RECEIVER\_DATA\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  $\#$  Print character and newline\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ li\ \ \ \   $\$$ v0, SYS\_PRINT\_CHAR\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  syscall\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ li\ \ \ \   $\$$ a0, ISO\_LF\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \ \ li\ \ \ \   $\$$ v0, SYS\_PRINT\_CHAR\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  syscall\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  jr\ \ \ \ \  $\$$ ra\par}\par
+
+{\fontsize{10pt}{12.0pt}\selectfont  \tabto{0.64in} \ \ \  \par}\par
+
+\setlength{\parskip}{5.04pt}
+	\item {\fontsize{13pt}{15.6pt}\selectfont Note that characters read from the keyboard this way are not automatically echoed to the terminal. Higher level I/O facilities (like SPIM syscall functions) contain code to echo characters as they are received.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont The advantage of spin-waiting is that it responds almost immediately when an I/O device is ready.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont The down side, of course, is that the CPU is completely consumed with polling the device until it is ready, and no useful work can be done until after the I/O transaction. With a device such as a keyboard, which will produce at best about 10 input events in a second, the keyboard may be polled millions of times between keystrokes, even on a slow CPU. Hence, the CPU spends almost all of its time finding out that there is no input available, and once every few million iterations finds something useful to do.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont An alternative to spin waiting is \textit{periodic polling}. In a periodic polling scenario, an I/O device is polled at various points during the execution of some useful code. Imagine the spin waiting loop above with a large amount of other code inserted, and you have a basic form of periodic polling.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont With periodic polling, the CPU can spend most of its time doing useful work. However, it is difficult or impossible to ensure that the device is polled at exactly the right frequency.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont Since the working code likely contains conditionals, we cannot always predict exactly how long it will take to reach the next polling instruction. If it takes too long (the device is under-polled), I/O events could be missed. If the software over-polls (polls far more often than events actually occur), then a significant percentage of available CPU time may be spent on polling, and the amount of useful work being done is reduced.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont When using software polling, the systems programmer must strike a balance between CPU time used for polling and the CPU time used for other work.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont If missing an I/O event would be unacceptable (as with keyboard input), then the device must be over-polled to ensure that this doesn't happen, and overall system performance will be reduced.\par}\par
+
+	\item {\fontsize{13pt}{15.6pt}\selectfont If missing an event is not critical (as with an output device becoming ready), then under-polling may be used so that the CPU is available for more useful work.\par}
+\end{itemize}\par
+
+\setlength{\parskip}{8.04pt}
+\ \ \ \ \ \ \ \ \ \ \ \ \  \textcolor[HTML]{7030A0}{Reference : Ch 8 (Memory Mapped I/O control),Britton}\par
+
+\begin{adjustwidth}{0.5in}{0.0in}
+{\fontsize{20pt}{24.0pt}\selectfont \textbf{Direct Memory Access}\par}\par
+
+\end{adjustwidth}
+
+\begin{itemize}
+	\item For devices that transfer large quantities of data ( such as disk controllers ), it is wasteful to tie up the CPU transferring data in and out of registers one byte at a time.\par
+
+	\item Instead this work can be off-loaded to a special processor, known as the \textit{Direct Memory Access, DMA, Controller.}\par
+
+	\item The host issues a command to the DMA controller, indicating the location where the data is located, the location where the data is to be transferred to, and the number of bytes of data to transfer. The DMA controller handles the data transfer, and then interrupts the CPU when the transfer is complete.\par
+
+	\item A simple DMA controller is a standard component in modern PCs, and many \textit{bus-mastering} I/O cards contain their own DMA hardware.\par
+
+	\item Handshaking between DMA controllers and their devices is accomplished through two wires called the DMA-request and DMA-acknowledge wires.\par
+
+	\item While the DMA transfer is going on the CPU does not have access to the PCI bus ( including main memory ), but it does have access to its internal registers and primary and secondary caches.\par
+
+	\item DMA can be done in terms of either physical addresses or virtual addresses that are mapped to physical addresses. The latter approach is known as \textit{Direct Virtual Memory Access, DVMA, }and allows direct data transfer from one memory-mapped device to another without using the main memory chips.\par
+
+	\item Direct DMA access by user processes can speed up operations, but is generally forbidden by modern systems for security and protection reasons.
+\end{itemize}\par
+
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 3 starts here %%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[H]
+	\begin{Center}
+		\includegraphics[width=6.5in,height=4.42in]{./media/image3.jpeg}
+	\end{Center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%% Figure/Image No: 3 Ends here %%%%%%%%%%%%%%%%%%%%
+
+\begin{adjustwidth}{0.5in}{0.0in}
+The above figure illustrates the DMA process\par
+
+\end{adjustwidth}
+
+\begin{adjustwidth}{0.5in}{0.0in}
+{\fontsize{13pt}{15.6pt}\selectfont References : Abraham Silberschatz, Greg Gagne, and Peter Baer Galvin, "Operating System Concepts, Eighth Edition ", Chapter 13\par}\par
+
+\end{adjustwidth}
+
+
+\vspace{\baselineskip}
+
+\vspace{\baselineskip}
+
+\printbibliography
+\end{document}
